@@ -1,6 +1,3 @@
 .git
 .idea
-*.doc
-*.docx
-*.pdf
-/doc
+
