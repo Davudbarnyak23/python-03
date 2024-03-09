@@ -1,8 +1,6 @@
-# Заняття 4
+# Повторення
+[github](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#links)
 
-## Повторення
-
----
 
 [Markdown syntax](https://www.jetbrains.com/help/hub/markdown-syntax.html)
 

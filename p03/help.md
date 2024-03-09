@@ -1,15 +1,41 @@
-# Заняття 3
+## Система імпорту
+Код Python в одному _модулі_ отримує доступ до коду в іншому _модулі_.
 
-### Умовні оператори
+#### ПРИКЛАД
+
+В даннму рядку імпортується something_we_want
+> import something_we_want 
+
+В даннму рядку імпортується something_we_want, як sww 
+> import something_we_want as sww
+
+В даннму рядку з something_we_want імпортується лише something
+> from something_we_want import something
+
+В данному рядку з something_we_want імпортируеться something, як s
+> from something_we_want import something as s
+
+Синтаксис as дозволяє звертатися до імпортованого модуля по новому імені 
 
 ---
- 
 
-#### Оператор __IF__
+Наприклад імпорт модуля __OS__. Цей модуль забезпечує портативний спосіб використання залежних від операційної системи функцій.
 
-Оператор if використовується для перевірки умови: якщо умова 
-виконується, ми виконуємо блок операторів (званий блоком if), 
-інакше ми обробляємо інший блок операторів (званий блоком else).  
+> import os
+
+_очистка консолі в операційній системі Windows_
+<pre>
+os.system('cls')
+</pre>
+_очистка консолі в операційній системі Linux_
+<pre>
+os.system('clear')
+</pre>
+
+
+## Оператор __IF__
+
+Оператор if використовується для перевірки умови: якщо умова виконується, ми виконуємо блок операторів (званий блоком if), інакше ми обробляємо інший блок операторів (званий блоком else).  
 
 Слово __else__ необов'язкове.
 
@@ -38,22 +64,7 @@ else:
    print('Більше одного')
 </pre>
 
-#### Оператори порівняння 
-
-`==` Дорівнює	_2 == 4 → False_
-
-`!=` Не дорівнює	_2 != 5 → True_
-
-`>` Більше ніж	_2 > 4 → False_
-
-`<` Менше ніж	_2 < 4 → True_
-
-`>=` Більше або Дорівнює	_2 >= 4 → False_
-
-`<=` Менше або Дорівнює	_2 <= 4 → True_
-
-#### Заокруглення числа
-
+## Заокруглення числа
 Функція __round()__
 
 > round(number, ndigits=None)
@@ -64,16 +75,4 @@ r = round(13.46, 1)
 print(r)
 </pre>
 
-_виведе: 13.5_  
-
-
-
----
-
-### Markdown Basic Syntax
-[MD Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
-**VS Code** supports Markdown files out of the box
-Markdown preview __Ctrl+Shift+V__
-
-[Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown)
+виведе: 13.5  
