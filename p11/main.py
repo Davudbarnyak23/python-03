@@ -48,6 +48,8 @@ while not game_over:
                and (my > pokemon_y) and (my < pokemon_y + pokemon_size)):
 
                 print(mx, my)
+                pokemon_x = random.randint(0, screen_width - pokemon_size)
+                pokemon_y = random.randint(0, screen_height - pokemon_size)
 
     screen.fill(black)
     screen.blit(pokemon, ( pokemon_x, pokemon_y))
