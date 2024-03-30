@@ -21,6 +21,7 @@ pygame.mouse.set_visible(False)
 clock_fps = 60
 clock = pygame.time.Clock()
 font_fps = pygame.font.SysFont('Calibri',28)
+font_points = pygame.font.SysFont('Calibri',28)
 
 
 def cursor_draw():
@@ -30,8 +31,7 @@ def cursor_draw():
     screen.blit(cursor_image, (x, y))
 
 
-user_count = 0
-pc_count = 0
+points = {"user":0, 'pc':0}
 
 game_over = False
 while not game_over:
@@ -50,11 +50,16 @@ while not game_over:
                 print(mx, my)
                 pokemon_x = random.randint(0, screen_width - pokemon_size)
                 pokemon_y = random.randint(0, screen_height - pokemon_size)
+                points['user']+=1
 
     screen.fill(black)
     screen.blit(pokemon, ( pokemon_x, pokemon_y))
     fps_text = f'{clock.get_fps():.1f}'
     font_fps_text = font_fps.render(fps_text, True, white)
+    screen.blit(font_fps_text, (screen_width - 120, 10))
+
+
+    font_points_text = font_points.render(f'0 : 0', True,white)
     screen.blit(font_fps_text, (screen_width - 120, 10))
     cursor_draw()
 
