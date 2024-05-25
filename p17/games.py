@@ -19,9 +19,9 @@ class Bullet:
         self.bullet = pygame.Surface((3, 5))
         self.bullet.fill((0, 0, 50))
 
-        self.x = x
+        self.x = x + 9
         self.y = y
-        self.speed = 2
+        self.speed = 0.5
 
     def move(self):
         self.y -= self.speed
@@ -95,7 +95,7 @@ class Bg:
     def __init__(self):
         self.x = 0
         self.y = -SCREEN_HEIGHT
-        self.speed = 1
+        self.speed = 0.1
         self.bg_surface = pygame.Surface((SCREEN_WIDTH, SCREEN_HEIGHT * 2))
 
         self.add_background()
@@ -112,7 +112,7 @@ class Bg:
                 self.bg_surface.blit(self.bg_image, (w * x, h * y))
 
     def draw_background(self):
-        self.y ++ self.speed
+        self.y += self.speed
 
         if self.y >= 0:
             self.y = -SCREEN_HEIGHT
@@ -245,6 +245,7 @@ class Game:
 
                 pygame.display.update()
         # end while
+
 
 
 if __name__ == '__main__':
