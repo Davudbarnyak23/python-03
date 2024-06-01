@@ -1,4 +1,4 @@
-import pygame, random, time, sys, asyncio
+import pygame, random, time , sys
 
 IMAGES_PATH = 'images/imagesm/'
 IMAGES_PATH1 = 'images/'
@@ -21,7 +21,7 @@ class Bullet:
 
         self.x = x + 9
         self.y = y
-        self.speed = 5
+        self.speed = 2
 
     def move(self):
         self.y -= self.speed
